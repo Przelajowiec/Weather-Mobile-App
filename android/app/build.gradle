@@ -16,3 +16,16 @@ subprojects {
 tasks.register("clean", Delete) {
     delete rootProject.buildDir
 }
+
+buildTypes {
+    release {
+        manifestPlaceholders = [applicationName: "android.app.Application"]
+    }
+
+    debug {
+        manifestPlaceholders = [applicationName: "android.app.Application"]
+    }
+    build{
+        manifestPlaceholders = [applicationName: "android.app.Application"]
+    }
+}
